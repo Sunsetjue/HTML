@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS元素定位</title>
+    <style>
+        /* 清楚默认的内外边距*/
+        *{margin:0px;padding:0px}
+        .position1{
+            width:100px;
+            height:100px;
+            /* position 设置元素的定位
+                relative 相对定位 以元素本身的位置为参考点 不会脱离文档流*/
+            position:relative;
+            left:50px;
+            top:50px;
+            background:green;
+        }
+        .position2{
+            width:70px;
+            height:70px;
+            background:pink;
+            /* position 设置元素的定位
+                absolute 绝对位置 以父级定位为参考位置
+                如果父级没有定位属性，则继续向上找 都没有找body
+                会脱离文档流 不占文档位置*/
+            position:absolute;
+            top:20px;
+            left:20px;
+        }
+        .position3{
+            width:300px;
+            height:300px;
+            margin:60px 10px;
+            border:1px solid red;
+            position:relative;
+        }
+        .position4{
+            width:100px;
+            height:100px;
+            background:#328;
+            position:absolute;
+            top:50px;
+            left:30px;
+        }
+        .fix{
+            width:150px;
+            height:30px;
+            background:cyan;
+            position:fixed;
+            /* 相对于浏览器的位置进行定位 */
+            bottom:100px;
+            right:50px;
+        }
+    </style>
+</head>
+<body style="height:3000px">
+    <div class="position1"></div>
+    <div class="position2"></div>
+    <div class="position3">
+        <div class="position4"></div>
+    </div>
+    <div class="fix">你肯定能一直看见我</div>
+</body>
+</html>

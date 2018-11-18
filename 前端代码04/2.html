@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>各元素之间的性质</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:red;
+            padding:20px;
+            /*margin:20px;*/
+        }
+        .we1{
+           width:1000px;
+            height:1000px;
+            /* 这里宽高并没有生效 遵循着字体的大小*/
+            background:green;
+            padding:20px;
+            /* 支持内边距 外边距支持左右 不支持上下*/
+            margin:20px;
+            border:3px solid pink;
+            /* 支持边框 */
+        }
+        .we2{
+            width:100px;
+            height:100px;
+        }
+        .we2 .we3{
+            display:none;
+        }
+        .we2:hover .we3{
+            display:block
+        }
+
+    </style>
+</head>
+<body>
+    <div>hahahhaha</div>
+    <span class="we1">hehieiheidasdahei</span>oooooo
+    <div class="we2">
+        <span class="we3">是个懒猪</span>宋越
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for while 循环</title>
+</head>
+<body>
+<script>
+    // for in循环 和python差不多
+    var l=[1,2,3,4];
+    for(i in l){
+        console.log(i,l[i]) // 这里i返回的是0123 是索引值
+    }
+    // for循环也可以遍历对象
+    var obj={'one':1,'two':2,'three':3};
+    for(k in obj){
+        console.log(k,obj[k]); // 不能和python里一样使用kv键值对
+    }
+
+    // for循环
+    for(var i=1;i<11;i++){ // i=1小于11然后加1然后循环执行
+        console.log(i)
+    }
+</script>
+</body>
+</html>

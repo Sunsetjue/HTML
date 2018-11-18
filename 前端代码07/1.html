@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typeof获取变量类型</title>
+</head>
+<body>
+    <script>
+        // 布尔值类型 true false 注意是小写
+        var b=true;
+        // alert(b);
+        alert(typeof(b));
+        // 将结果打印到控制台
+        console.log(typeof(b));
+
+        // 数值类型 整数 小数 二进制数 八进制数 十六进制数
+        var num1=1997
+        console.log(num1,typeof(num1));
+        // 特殊的数值类型 NaN
+        // Not a Number 不是数
+        var num2=NaN;
+        console.log(num2,typeof(num2));
+
+        // 字符串类型
+        var str1='123332';
+        console.log(typeof(str1));
+        var str2='hahahaha哈哈哈';
+        console.log(str2,typeof(str2));
+
+        // 对象类型 对象 数组 null
+        var obj={one:1,two:2,three:3};
+        console.log(obj,typeof(obj));
+        var list=[1,2,3,4,5];
+        console.log(list,typeof(list));
+
+        // 函数数据类型 function
+        var func=function(){
+            wwahahahahaha
+        };
+        console.log(func,typeof(func));
+
+        // undefined 未定义类型
+        var un=undefined;
+        console.log(un,typeof(un));
+
+    </script>
+</body>
+</html>

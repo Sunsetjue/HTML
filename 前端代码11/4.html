@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片属性操作</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<img>
+<script>
+// 属性操作 attr
+$('img').attr({src:'./2015-09-18 232805.jpg',alt:'photo',title:'这是一张图'});
+// 获取属性
+console.log($('img').attr('title'));
+// 删除属性
+$('img').removeAttr('title');
+</script>
+</body>
+</html>

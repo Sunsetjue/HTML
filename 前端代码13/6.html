@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按键控制元素</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background:green;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+    var l=0;
+    var m=0
+        // 获取A W S D的编码数字
+        $(window).keydown(function(e){
+            console.log(e.keyCode);
+            // 可得A:65 W:87 S:83 D:68
+            var kc=e.keyCode;
+            if(kc==65){
+                l-=5;
+                $('div').css('left',l+'px'); // left 指距离文档左边的距离
+            }else if(kc==68){
+                l+=5;
+                $('div').css('left',l+'px');
+            }else if(kc==87){
+                m-=5;
+                $('div').css('top',m+'px');
+            }else if(kc==83){
+                m+=5
+                $('div').css('top',m+'px');
+            };
+        });
+    </script>
+</body>
+</html>

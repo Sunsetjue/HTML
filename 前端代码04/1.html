@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css内间距和外间距</title>
+    <style>
+        .padding{
+            width:100px;
+            height:100px;
+            background-color:cyan;
+
+            padding-top:30px;
+            padding-left:30px;
+            padding-right:30px;
+            padding-bottom:30px;
+        }
+        /* 设置元素的内边距 让元素和其中的内容有一定的距离*/
+        /* 在使用padding的时候 会改变原来元素的大小*/
+        /* 在不指定上下左后的时候 第一个代表左上 依次顺时针代表位置
+            如果是一个指则代表四边的值 */
+
+        .margin1,.margin2{
+            width:200px;
+            height:200px;
+        }
+        .margin1{
+            background-color:pink;
+            /* 设置外边距 用margin 也是指定方位 不指定那么方式和内边距一样 不改变元素的大小*/
+            /* 如果设置四个值 分别是 上 右 下 左
+               如果设置两个值 分别是 上下 右左*/
+            /* margin-bottom:30px; */
+            /* margin的使用技巧 */
+            margin:0 auto;
+            /* 上下为0px 左右为自动auto 那么则是平分屏幕*/
+        }
+        .margin2{
+            background-color:cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <!--内边距 指的是元素距离元素内部元素的间距-->
+    <div class="padding">哈哈哈哈哈</div>
+    <!--外间距 是指元素距离元素外部元素之间的距离-->
+    <div class="margin1"></div>
+    <div class="margin2"></div>
+</body>
+</html>

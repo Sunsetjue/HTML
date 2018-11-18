@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js对象</title>
+</head>
+<body>
+<script>
+    // 通过Object来定义对象
+    var obj=new Object();
+    obj.one=1;
+    obj.two=2;
+    obj.wa=function(){
+        console.log('wahhahahha');
+    };
+    // 访问对象
+    console.log(obj.one);
+    obj.wa();
+
+    // 直接定义对象
+    var obj1={one:1,two:2,three:3,wa:function(){
+        console.log('wahahahah');
+    }
+    };
+    // 访问对象
+    console.log(obj1.one);
+    obj1.wa();
+    // 添加新的属性
+    obj1.four=4;
+    console.log(obj1.four);
+
+    //通过构造函数来自定义对象
+    function obj4(num1,num2){
+        this.num1=num1;
+        this.num2=num2;
+        this.wa=function(){
+            console.log('wahahaha')
+        };
+    };
+    // 实例化对象
+    var yi=new obj4('one',1);
+    console.log(yi.num1);
+    yi.wa()
+
+    var l=['1','2','3'];
+    console.log(l.constructor);
+</script>
+</body>
+</html>

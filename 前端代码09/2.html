@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画效果</title>
+    <style>
+    #time1{
+        width:30px;
+        height:30px;
+        background:cyan;
+    }
+    </style>
+</head>
+<body>
+    <div id="time1"></div>
+    <script>
+        var div=document.getElementById('time1');
+        var i=30;
+        var set=setInterval(function(){
+            i++;
+            div.style.width=i+'px';
+            div.style.height=i+'px';
+            // 当宽高大于300时，停止计时器
+            if(i==300){
+                clearInterval(set);
+            }
+        },50);
+    </script>
+</body>
+</html>

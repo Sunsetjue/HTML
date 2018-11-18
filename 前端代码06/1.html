@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS引用方式</title>
+</head>
+<body>
+    <!--这是内嵌式 在页面script中嵌入-->
+    <script>
+        // 这个表示在JS里的单行注释 多行注释和CSS一样
+        alert('我的第一个JS');
+    </script>
+    <!--外链式-->
+    <script src="./1.js">
+    // 在外部引用后 里面的标签就不会执行了
+        alert('hahahahahah);
+    </script>
+    <!--行间样式-->
+    <!--on 当.....的时候
+        click:单机-->
+    <div onclick="alert('我在行间被引用了JS')">啊哈哈哈我可以被点</div>
+    <a href="javascript:alert('我又被引用了')">我也可以被点</a>
+    <a href="javascript:void(1)" onclick="alert('我又又被引用了')">我也也可以被点点</a>
+</body>
+</html>

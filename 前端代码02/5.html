@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类及伪元素选择器</title>
+    <style>
+        /* hover 设置鼠标悬停在元素时的状态*/
+        .item{
+            width:300px;
+            height:200px;
+            background-color:cyan;
+        }
+        .item:hover{
+            /* 鼠标悬停上之后的样式*/
+            background-color:pink;
+        }
+        /* after指在元素后面插入 before指在前面插入*/
+        .item:after{
+            content:'宋越'
+        }
+        .item:before{
+            content:'I '
+        }
+    </style>
+</head>
+<body>
+    <div class="item">love&nbsp;</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS元素获取</title>
+</head>
+<body>
+    <div id="get1">23333</div>
+    <script>
+        // 首先获取元素对象
+        var div=document.getElementById('get1');
+        console.log(div);
+        // script 标签注意要写在div标签上面
+        // js可以通过style属性来给元素设置样式
+        div.style.width="100px";
+        div.style.height="100px";
+        div.style.border="red solid 2px";
+        div.style.fontSize="20px";
+        // 注意 Js获取后变量里不能写 - 这个符号，改为 - 后的第一个字母大写
+
+        // 通过js获取元素的样式 只能获取行间样式
+        console.log(div.style.width)
+
+        // js 操作元素的文本内容 innerHTML innerText
+        div.innerHTML='23232323' // 会覆盖原来标签内的内容
+        div.innerHTML='<p>hahah</p>' // 会解析内容，即使里面有标签
+        div.innerText='233232'
+        div.innerText='<p>hahah</p>' // 这个则不会，会直接返回innerText里面的所有内容 只能获取文本
+
+    </script>
+</body>
+</html>

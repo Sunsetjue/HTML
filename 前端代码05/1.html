@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS浮动</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+        }
+        .float1{
+            background:pink;
+            /* 浮动
+                左浮动：float：left
+                右浮动：float：right
+                1.浮动会让元素脱离文档流，后面不浮动的会占据原来的位置
+                2.停止浮动，碰到父级元素边界会停止 碰到上一个浮动元素停止 碰到未浮动的元素
+                3.浮动会把元素转化为行块内元素
+                4.当父级元素没有设置高度时，如果子集元素都浮动，那么父级元素的高度就无法被撑开
+                解决办法，给父级元素添加overflow:hidden;
+                5.当父级元素位置不够时，换行显示
+            */
+            float:left;
+        }
+        .float2{
+            width:220px;
+            background:red;
+            float:right;
+        }
+        .float3{
+            width:220px;
+            background:yellow;
+        }
+        .float4{
+            background:blue;
+            float:right
+        }
+    </style>
+</head>
+<body>
+    <div class="float1">宋越yueyueyueyue</div>
+    <div class="float2">孙彬bingbingbing</div>
+    <div class="float3">longlonglnognlong</div>
+    <div class="float4">yangyangyangyang</div>
+</body>
+</html>

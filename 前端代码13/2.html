@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态方法绑定</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <button class="btn1">点击</button>
+    <div class="box1">可被按下</div>
+    <script>
+        // $('.btn1').click(function(){
+        //    console.log('触发绑定事件')
+        // });
+        $('.btn1').live('click',function(){
+            console.log('触发绑定事件')
+        });
+        var newbtn=$('<button class="btn1">这是新按钮</button>');
+        $('body').append(newbtn);
+        // 触发事件 自动触发指定事件
+        $('.btn1').trigger('click');
+
+        // 单击事件click 双击事件dblclick
+        // 鼠标事件
+        // 鼠标按下事件 mousedown：鼠标按下时触发 mouseup：鼠标点击放开时触发
+        $('.box1').css({width:'100px',height:'100px',background:'red'});
+        $('.box1').mousedown(function(){
+            console.log('鼠标被按下了')
+        });
+        $('.box1').mouseup(function(){
+            console.log('鼠标被抬起了')
+        });
+        // 鼠标移入事件：mouseover
+        $('.box1').mouseover(function(){
+            $('.box1').css('background','cyan');
+        });
+        // 鼠标移出事件：mouseout
+        $('.box1').mouseout(function(){
+            $('.box1').css('background','red');
+        });
+        // 鼠标移动事件：mousemove
+        $(window).mousemove(function(){
+            console.log('鼠标正在移动');
+        });
+    </script>
+</body>
+</html>

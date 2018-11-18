@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Js定时器</title>
+</head>
+<body>
+<script>
+    // 单次定时器 setTimeout 时间单位是毫秒
+    // 第一个参数是函数 第二个是时间
+    setTimeout(function(){
+        console.log('2秒后执行');
+    },2000);
+    function web(){
+        console.log('wahahah');
+    }
+    setTimeout(web,3000); // 注意不能加括号
+
+    // 循环定时器 setInterval() 参数设置和单词定时器一样 特点不会停止
+    // 清除定时器 启动定时器之后，会返回一个表示符 通过这个标识符来清除定时器
+    // var i=0;
+    var set=setInterval(function(){
+        console.log('循环定时器启动');
+        // i++;
+    },1000);
+    console.log(set)
+    setTimeout(function(){
+        clearInterval(set);
+        console.log('清除定时器启动');
+    },8000);
+</script>
+</body>
+</html>

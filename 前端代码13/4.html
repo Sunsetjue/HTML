@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素的默认行为</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!--在页面中有些元素是具备默认行为的,例如a链接的单击,表单的提交,都会进行跳转或提交-->
+<a href="https://www.baidu.com" target="_blank">点我跳百度</a>
+<script>
+// 但是在绑定上事件后,它首先会先执行事件,再去执行默认行为
+    $('a').click(function(){
+        alert('准备跳转了');
+        // 阻止默认行为
+        return false;
+    });
+</script>
+</body>
+</html>

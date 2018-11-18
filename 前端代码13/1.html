@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery绑定</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        #box1{
+            width:100px;
+            height:100px;
+            background:cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">单击或者双击都可以</div>
+    <script>
+        // bind方法绑定
+        $('#box1').bind('click',function(){
+            alert('很烦')
+        });
+        // 解除事件绑定
+        $('#box1').unbind(); // 如果不指定解除事件，那会默认解除所有事件
+        // 双击事件绑定
+        $('#box1').dblclick(function(){
+            alert('真的非常烦了')
+        });
+    </script>
+</body>
+</html>

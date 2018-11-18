@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类名的操作</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        .box1{
+        width:100px;
+        height:100px;
+        border:3px solid red;
+        }
+        .box2{
+            background:cyan;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+    // 通过jQuery来添加类名 可以同时添加多个
+        $('div').addClass('box1 box2');
+    // 删除类名 也可以同时删除多个
+        $('div').removeClass('box2'); // 如果不指定所要删除的内容。则默认删除所有
+    </script>
+</body>
+</html>

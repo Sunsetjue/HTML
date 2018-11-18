@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景设置</title>
+    <style>
+        .back{
+            width:300px;
+            height:200px;
+            background:cyan;
+            /* 设置背景图片 */
+            background-image:url(./56fcd25dbb4a8.jpg);
+            /* 设置背景图片大小 */
+            background-size:100% 100%;
+
+        }
+        .back1{
+            width:500px;
+            height:300px;
+            background-image:url(./56fcd25dbb4a8.jpg);
+            /* 设置背景图片的位置*/
+            background-position:1021px 512px;
+        }
+        .back2{
+            width:500px;
+            height:500px;
+            border:1px solid red;
+            /* 背景图片属性可以写在一起 组合设置*/
+            background:url(./56fcd25dbb4a8.jpg) no-repeat 90% 85%;
+        }
+    </style>
+</head>
+<body>
+    <div class="back"></div>
+    <div class="back1"></div>
+    <div class="back2"></div>
+</body>
+</html>

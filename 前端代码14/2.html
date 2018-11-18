@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点操作</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+    <style>
+        .box1{
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            background:pink;
+            float:left;
+            line-height:100px;
+            text-align:center;
+        }
+        .box3{
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            background:pink;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <button>后面画一圆</button>
+    <button>前面画一圆</button>
+    <button>清除</button>
+    <button>清空</button>
+    <div class="box2"></div>
+    <script>
+        $('.box2').css({width:'800px',height:'800px',border:'2px red solid'});
+        // var div_1=$('<div class="box1"></div>');
+        // $('.box1').css({width:'100px',height:'100px',borderRadius:'50%',background:'pink'});
+        $('button').eq(0).click(function(){
+            var div_1=$('<div class="box1">刘洋</div>');
+            div_1.css('background','rgb('+rand(0,255)+','+rand(0,255)+','+rand(0,255)+')');
+            $('.box2').append(div_1); // 在元素的尾部插入元素 在指定的元素里面插入新的元素
+            // div_1.appendTo($('.box2')) 将新的元素插入到指定元素里
+        });
+        $('button').eq(1).click(function(){
+            var div_2=$('<div class="box3"></div>');
+            div_2.css('background','rgb('+rand(0,255)+','+rand(0,255)+','+rand(0,255)+')');
+            $('.box2').prepend(div_2);
+        });
+        $('button').eq(2).click(function(){
+            $('.box2').remove(); // 删除当前元素,即<div class="box2"></div>
+        });
+        $('button').eq(3).click(function(){
+            $('.box2').empty(); // 清空当前元素下的元素节点
+        });
+        function rand(m,n){
+            return Math.floor(Math.random()*(n-m+1))+m;
+        }
+    </script>
+</body>
+</html>

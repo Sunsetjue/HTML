@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div class="box1">点击有奖</div>
+    <script>
+    // 基本事件的绑定
+    // 原生是 元素对象.onclick=function(){}
+    // 给box1绑定单击事件
+        $('.box1').click(function(){
+            alert('怎么可能有奖呢，我都快穷死')
+        });
+    </script>
+</body>
+</html>

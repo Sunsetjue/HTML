@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if和switch语句</title>
+</head>
+<body>
+<script>
+    if(10>11){
+        console.log('执行真区间的代码');
+    }else{
+        console.log('执行假区间的代码');
+    }
+
+    if('222'>'1111'){
+        console.log('执行真区间的代码');
+    }else{
+        console.log('执行假区间的代码');
+    }
+    // 字符串的比较 上面为真
+
+    if('h222'>'3'){
+        console.log('执行真区间的代码');
+    }else{
+        console.log('执行假区间的代码');
+    }
+    // 这个也为真
+
+    if('hhhaa'>'weee'){
+        console.log('执行真区间的代码');
+    }else{
+        console.log('执行假区间的代码');
+    }
+    // 字符串好像是比较第一个字母的排序 上述案例h在w前面，因此h<w，执行假区间代码
+
+    if(1=='1'){
+        console.log('这两个在JS里是相等的');
+    }else if(1<1){ // 等同于python里的elif
+        console.log('1>0');
+    }else {
+        console.log('都不成立');
+    }
+
+    // switch()判断 必须配合case使用
+    // 注意switch当中的参数必须是 === 全等 值相同 类型也要相同
+    var a='1';
+    switch(a){
+        // 进行判断语句
+        case 1:
+            console.log('1号');
+            break;
+        case 2:
+            console.log('2号');
+            break;
+        case 3:
+            console.log('3号');
+            break;
+        case 4:
+            console.log('4号');
+            break;
+        default:
+            console.log('0号');
+        // 当case条件都不满足的时候，就执行default区间的代码
+    }
+
+</script>
+</body>
+</html>

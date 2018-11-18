@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+    <style>
+        /* 通过层级选择器 通过父级元素来设置子集元素的样式 还可以设置子元素的子集*/
+        .sunbin_1{
+            width:105px;
+            height:105px;
+            background-color:orange;
+        }
+        .sunbin_1 .sunbin_2{
+            width:75px;
+            height:75px;
+            background-color:cyan;
+        }
+        .sunbin_1 div{
+            width:30px;
+            height:30px;
+            background-color:brown
+        }
+    </style>
+</head>
+<body>
+    <div class="sunbin_1">
+        <div></div>
+        <div class="sunbin_2">
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

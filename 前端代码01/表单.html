@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+    <!--form标签来划定一个表单区域
+        action:数据提交地址
+        method:提交方式 get post
+        表单默认会用get方式进行传输
+        get: 通过url地址传输数据，数据会显示在url地址栏当中
+    -->
+    <form action="" method="" enctype="multipart/form-data">
+        <!--表单控件
+            type: 指定我们要填写的的表单类型 文本 密码框 单选框 多选框
+            必须要填写name属性
+        -->
+        用户名： <input type="text" name="username" value="" placeholder="输入名字把"> <br>
+        密&nbsp;&nbsp;&nbsp;码： <input type="password" name="password"> <br>
+        <!--radio属性表示单选 里面name的名字一定要一样，不然就不是单选了，也要指定值-->
+        性&nbsp;&nbsp;&nbsp;别： <input type="radio" name="sex" value="1">
+                                    <input type='radio' name="sex" value="0"> <br>
+        <!--checkbox属性表示多选 里面的name值也必须相同 也要指定value-->
+        特&nbsp;&nbsp;&nbsp;点： <input type="checkbox" name="love[]" value="b">被孙彬喜欢
+                                    <input type="checkbox" name="love[]" value="t">特别可爱
+                                    <input type="checkbox" name="love[]" value="x">胸口碎大石 <br>
+        <!--select属性表示下拉框 配合option使用-->
+        爱&nbsp;&nbsp;&nbsp;好： <select name="hobby" id="2">
+                                        <option value="3">睡懒觉</option>
+                                        <option value="4">玩游戏</option>
+                                        <option value="5">想要羊驼包</option>
+                                    </select> <br>
+        <!--file属性表示文件上传-->
+        上传文件： <input type="file" name="file"> <br>
+
+        个人说明：<br> <textarea name="text" id="" cols="30" rows="10">输入补充内容</textarea> <br>
+
+        <!--submit属性表示按钮 value里填写按钮里面的值-->
+        <input type="submit" value="提交">
+
+        <!--隐藏域 不需要用户知道和填写的信息-->
+        <input type="hidden" name="我刚刚把前面的代码不小心删了又重写就很....." value="100">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css标签选择器</title>
+    <style>
+        /* 这个写法是CSS里面的注释 */
+        /*标签选择器,通过标签来设置元素的样式 影响范围最大*/
+        /*div{*/
+            /*width:200px;*/
+           /*height:200px;*/
+            /*background-color:red;*/
+        /*}*/
+        /* .类选择器,通过class类名来设置元素的样式 影响范围相对较小 */
+        .item1{
+                width:200px;
+                height:200px;
+                background-color:red;
+        }
+        .item2{
+                width:100px;
+                height:100px;
+                background-color:yellow;
+        }
+        /* #id选择器 通过id类名来设置元素的样式 影响范围最小*/
+        #box{
+            width:75px;
+            height:75px;
+            border:2px solid green;
+        }
+        /* border的三个属性:边框的宽度 直线solid 颜色*/
+        .item3{
+            width:50px;
+            height:50px;
+            border:1px solid red;
+        }
+        .bg{
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="item1">I</div>
+    <div id="box">You</div>
+    <!--如果一个div里面有几个标签选择器,那么影响范围小的最优先执行-->
+    <div class="item3 bg">宋越</div>
+</body>
+</html>

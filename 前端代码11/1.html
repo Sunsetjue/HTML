@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <!--引入jQuery库文件-->
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <div id="get1">wahahaha</div>
+    <ul>
+        <li class="one">一</li>
+        <li class="two">二</li>
+        <li class="three">三</li>
+    </ul>
+    <div class="wrap">
+
+        <div class="box">wahahah</div>
+        <div class="box1">ooooop</div>
+        <div>2333333</div>
+        <p>sunibn is a sb</p>
+    </div>
+<script>
+    // 检测jQuery库文件是否引入成功
+    console.log($);
+
+    // 通过id来获取元素 原生的方法是document.getElementById('get1')
+    console.log($('#get1'));
+    // 通过class来获取元素
+    console.log($('.one'));
+    // 获取第一个li元素
+    console.log($('li:first'));
+    // 获取最后一个li元素
+    console.log($('li:last'));
+    // 获取指定的li元素
+    console.log($('li:eq(3)')); //从0开始获取 也就是获取第0个也就是第一个 如果没有则会报pervObject
+    // 通过元素内的内容案例获取元素
+    console.log($('li:contains(二)'));
+    // 通过指定元素的指定属性来获取元素
+    console.log($('li[class=two]'));
+
+    // 父子关系获取
+    // 通过父元素获取子元素
+    // 获取所有子元素 获取指定元素下所有子元素 返回数组
+    console.log($('.wrap').children());
+    // 获取指定元素下的第一个子元素
+    console.log($('.wrap div:first-child')); // 如果第一个不是div 那就获取不到 只能获取div
+    // 获取指定元素下的最后一个子元素
+    console.log($('.wrap div:last-child'))  // 由于最后一个不是div，而是p元素，所以索引不到
+    // 获取指定个数的子元素
+    console.log($('.wrap div:nth-child(1)')) //按个数来，从第一个开始，而不是索引值，第一个就是第一个div
+
+    // 通过子元素获取父元素/同级元素
+    // 获取同级的上级元素
+    console.log($('.box1').prev())
+    // 获取同级的下级元素
+    console.log($('.box1').next())
+    // 获取同级的所有元素
+    console.log($('.box').siblings()) // 获取的同级元素不包括自己
+    // 获取父级
+    console.log($('.box').parent())
+    // 获取先辈级
+    console.log($('.box').parents()) // 不指定则是找所有的先辈级
+
+</script>
+</body>
+</html>
